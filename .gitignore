@@ -8,6 +8,3 @@ __pycache__/
 # VeighNa相关目录
 /.vntrader/log/
 /.vntrader/ctp/
-
-# 其他
-*.yml
