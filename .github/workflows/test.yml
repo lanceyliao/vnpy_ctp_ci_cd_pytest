@@ -122,8 +122,6 @@ jobs:
       if: matrix.install-method == 'conda' && runner.os == 'Windows'
       shell: bash -l {0}
       env:
-        CTP_USER: ${{ secrets.CTP_USER }}
-        CTP_PASSWORD: ${{ secrets.CTP_PASSWORD }}
         PYTHONPATH: ${{ github.workspace }}
       run: |
         pytest tests/test_md_ctp.py -v
@@ -132,8 +130,6 @@ jobs:
       if: matrix.install-method == 'conda' && runner.os == 'Linux'
       shell: bash -l {0}
       env:
-        CTP_USER: ${{ secrets.CTP_USER }}
-        CTP_PASSWORD: ${{ secrets.CTP_PASSWORD }}
         PYTHONPATH: ${{ github.workspace }}
         LC_ALL: zh_CN.GB18030
         LANG: zh_CN.GB18030
@@ -149,8 +145,6 @@ jobs:
     - name: Run tests (Non-Conda)
       if: matrix.install-method != 'conda'
       env:
-        CTP_USER: ${{ secrets.CTP_USER }}
-        CTP_PASSWORD: ${{ secrets.CTP_PASSWORD }}
         PYTHONPATH: ${{ github.workspace }}
       run: |
         pytest tests/test_md_ctp.py -v 
