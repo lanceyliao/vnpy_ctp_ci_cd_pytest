@@ -1,0 +1,13 @@
+/.idea
+
+# Python缓存文件
+__pycache__/
+*.py[cod]
+*$py.class
+
+# VeighNa相关目录
+/.vntrader/log/
+/.vntrader/ctp/
+
+# 其他
+*.yml
